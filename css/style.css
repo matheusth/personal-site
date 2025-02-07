@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	--white-primary: #FFFFFF;
 	--dark-primary: #2B4269;
@@ -9,7 +13,9 @@
 @media (max-width: 570px) {
 	.principal .container {
 		flex-direction: column-reverse;
+		margin: 0;
 	}
+
 	.principal .container .texto {
 		text-align: center;
 	}
@@ -20,7 +26,8 @@
 	padding: 1em;
 	width: 100vw;
 }
-.principal .container	{
+
+.principal .container {
 	display: flex;
 	margin: 0 auto;
 	gap: 1em;
@@ -29,6 +36,7 @@
 	align-self: center;
 	max-width: 1920px;
 }
+
 .profile {
 	border-radius: 50%;
 }
@@ -36,16 +44,23 @@
 body {
 	background-color: #D9E8F5;
 }
+
 .profile {
 	width: 100px;
 }
+
 .logo {
 	color: var(--white-primary);
-	border-bottom: 1px solid var(--gray-secondary);
+	border-bottom: 2px solid var(--gray-secondary);
 	font-size: 2rem;
+	font-family: "Roboto Slab";
+	font-weight: 600;
 }
+
 .principal .texto p {
-	color: var(--gray-secondary);
+	color: var(--white-primary);
+	font-family: "Roboto Slab";
+	font-weight: 300;
 	font-size: 1.5rem;
 }
 
@@ -55,16 +70,29 @@ main {
 	padding: 0 1em;
 	text-align: justify;
 }
-main .projetos {
-	background-color: var(--white-primary);
-	padding: 5px 10px;
+
+.projetoimg {
+	max-height: 150px;
 	border-radius: 30px;
-	box-sizing: border-box;
+}
+
+.projetotexto {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+main .projeto {
+	background-color: var(--white-primary);
+	padding: 15px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	gap: 2em;
 }
 
 main h1 {
 	font-size: 2em;
 	color: var(--dark-primary);
 	font-weight: bold;
-	margin: 10px 0;
 }
