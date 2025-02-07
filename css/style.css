@@ -82,12 +82,19 @@ main {
 	gap: 1em;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
 main .projeto {
 	background-color: var(--white-primary);
 	padding: 15px;
 	border-radius: 30px;
 	display: flex;
-	align-items: center;
+	align-items: space-between;
+	justify-content: space-between;
 	gap: 2em;
 }
 
