@@ -3,38 +3,70 @@
 }
 
 :root {
-	--white-primary: #FFFFFF;
-	--dark-primary: #2B4269;
+	--white-primary: #fff;
+	--dark-primary: #262225;
 	--gray-secondary: #D9E8F5;
 	--blue-button: #167BF7;
-	--background-color: #F25D0B;
+	--background-color: #000;
+	--accent-color: #FFFFFF1C;
 }
 
-@media (max-width: 570px) {
-	.principal .container {
-		flex-direction: column-reverse;
-		margin: 0;
-	}
-
-	.principal .container .texto {
-		text-align: center;
-	}
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0 auto;
+	width: 100vw;
+	max-width: 1200px;
 }
 
 .principal {
-	background: var(--background-color);
-	padding: 1em;
-	width: 100vw;
+	background: var(--accent-color);
+	width: 20vw;
+	padding: 0 1em;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
 }
 
-.principal .container {
+@media (max-width: 520px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.principal {
+		display: flex;
+		height: 200px;
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	.container_principal {
+		width: 100vw;
+		height: 200px;
+	}
+
+}
+
+@media (max-width: 400px) {
+	.container_principal p {
+		display: none;
+	}
+
+	.projetoimg {
+		display: none;
+	}
+}
+
+
+.principal .container_principal {
 	display: flex;
-	margin: 0 auto;
-	gap: 1em;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
 	align-items: center;
-	align-self: center;
-	max-width: 1920px;
+	height: 100vh;
 }
 
 .profile {
@@ -42,7 +74,9 @@
 }
 
 body {
-	background-color: #D9E8F5;
+	background-color: var(--background-color);
+	display: flex;
+	flex-direction: row;
 }
 
 .profile {
@@ -51,17 +85,18 @@ body {
 
 .logo {
 	color: var(--white-primary);
-	border-bottom: 2px solid var(--gray-secondary);
-	font-size: 2rem;
+	font-size: 1.6rem;
+	margin-bottom: 0.5rem;
 	font-family: "Roboto Slab";
 	font-weight: 600;
 }
+
 
 .principal .texto p {
 	color: var(--white-primary);
 	font-family: "Roboto Slab";
 	font-weight: 300;
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 
 main {
@@ -72,14 +107,16 @@ main {
 }
 
 .projetoimg {
-	max-height: 150px;
-	border-radius: 30px;
+	max-height: 100px;
+	max-width: 100px;
+	border-radius: 50%;
 }
 
 .projetotexto {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	color: var(--gray-secondary);
 }
 
 main {
@@ -89,17 +126,17 @@ main {
 }
 
 main .projeto {
-	background-color: var(--white-primary);
+	background-color: var(--dark-primary);
 	padding: 15px;
 	border-radius: 30px;
 	display: flex;
-	align-items: space-between;
+	align-items: center;
 	justify-content: space-between;
 	gap: 2em;
 }
 
 main h1 {
-	font-size: 2em;
-	color: var(--dark-primary);
+	font-size: 1.5em;
+	color: var(--white-primary);
 	font-weight: bold;
 }
