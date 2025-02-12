@@ -107,8 +107,8 @@ main {
 }
 
 .projetoimg {
-	max-height: 100px;
-	max-width: 100px;
+	height: 100px;
+	width: 100px;
 	border-radius: 50%;
 }
 
@@ -126,13 +126,23 @@ main {
 }
 
 main .projeto {
-	background-color: var(--dark-primary);
+	background: url('/img/star_background.jpg');
+	background-size: cover;
 	padding: 15px;
 	border-radius: 30px;
+	box-shadow: var(--gray-secondary) 0px 0px 5px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 2em;
+}
+
+main .projeto:hover {
+	box-shadow: var(--gray-secondary) 0px 0px 15px;
+}
+
+.projeto .info {
+	color: var(--gray-secondary);
 }
 
 main h1 {
